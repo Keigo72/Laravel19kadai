@@ -27,14 +27,12 @@ Route::group(['prefix' => 'admin'], function() {
 Route::group(['prefix' => 'admin'], function() {
     Route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');
     Route::post('profile/create', 'Admin\ProfileController@create')->middleware('auth');
+    Route::get('profile', 'Admin\ProfileController@index')->middleware('auth'); // 追記
     Route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth'); // 追記
     Route::post('profile/edit', 'Admin\ProfileController@update')->middleware('auth'); // 追記
+    Route::get('profile/delete', 'Admin\ProfileController@delete')->middleware('auth'); // 追記
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('profile/edit', 'Admin\ProfileController@edit');
-    Route::post('profile/edit', 'Admin\ProfileController@update');
-});
 
 Auth::routes();
 
