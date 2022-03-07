@@ -13,7 +13,7 @@
             <div class="col-md-8">
                 <form action="{{ action('Admin\ProfileController@index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-2">名前</label>
+                        <label class="col-md-2">氏名</label>
                         <div class="col-md-8">
                             <input type="text" class="form-control" name="cond_title" value={{ $cond_title }}>
                         </div>
@@ -32,7 +32,7 @@
                         <thead>
                             <tr>
                                 <th width="10%">ID</th>
-                                <th width="20%">名前</th>
+                                <th width="20%">氏名</th>
                                 <th width="10%">性別</th>
                                 <th width="20%">趣味</th>
                                 <th width="30%">自己紹介</th>
